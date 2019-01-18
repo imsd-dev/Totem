@@ -1,0 +1,9 @@
+
+   
+ <IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REMOTE_ADDR} !^192.168.1.10
+RewriteCond %{REQUEST_URI} !/en-obras.html$ [NC]
+RewriteCond %{REQUEST_URI} !.(jpe?g?|png|gif|css|js) [NC]
+RewriteRule .* /en-obras.html [R=302,L]
+</IfModule>
